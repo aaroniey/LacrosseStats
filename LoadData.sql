@@ -1,9 +1,9 @@
-Insert into Player(player_id, playername) values (1, "Aaron Silcott");
-Insert into Player(player_id, playername) values (2, "Tommy boy");
-Insert into Player(player_id, playername) values (3, "Bitchty bitch");
-Insert into Player(player_id, playername) values (4, "unoriginal testing");
-Insert into Team(team_id, teamname) values (1, "Gators");
-Insert into Team(team_id, teamname) values (2, "Bulls");
+Insert into Player(first_name, last_name, jersey_number, grade, position) values ( 'Aaron', 'Silcott', 33, 'Sophmore', 'mid');
+Insert into Player(first_name, last_name, jersey_number, grade, position) values ( 'Mitch', 'Wilson', 3, 'Junior', 'mid');
+Insert into Player(first_name, last_name, jersey_number, grade, position) values ( 'example', 'player', 33, 'Sophmore', 'att');
+Insert into Player(first_name, last_name, jersey_number, grade, position) values ( 'out of', 'ideas', 33, 'Sophmore', 'def');
+Insert into Team( teamname) values ( "Gators");
+Insert into Team( teamname) values ( "Bulls");
 Insert into Roster(team_id, player_id) values(1, 1);
 Insert into Roster(team_id, player_id) values(1, 2);
 Insert into Roster(team_id, player_id) values(2, 3);

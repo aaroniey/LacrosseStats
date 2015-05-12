@@ -1,3 +1,6 @@
 .read droptables.sql
+.read droptriggers.sql
 .read createtables.sql
+.read createtriggers.sql
 .read loaddata.sql
+.read testtrigger.sql
