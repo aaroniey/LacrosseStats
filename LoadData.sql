@@ -1,0 +1,10 @@
+Insert into Player(player_id, playername) values (1, "Aaron Silcott");
+Insert into Player(player_id, playername) values (2, "Tommy boy");
+Insert into Player(player_id, playername) values (3, "Bitchty bitch");
+Insert into Player(player_id, playername) values (4, "unoriginal testing");
+Insert into Team(team_id, teamname) values (1, "Gators");
+Insert into Team(team_id, teamname) values (2, "Bulls");
+Insert into Roster(team_id, player_id) values(1, 1);
+Insert into Roster(team_id, player_id) values(1, 2);
+Insert into Roster(team_id, player_id) values(2, 3);
+Insert into Roster(team_id, player_id) values(2, 4);

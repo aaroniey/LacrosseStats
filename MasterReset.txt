@@ -1,0 +1,3 @@
+.read droptables.sql
+.read createtables.sql
+.read loaddata.sql
