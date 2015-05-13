@@ -6,19 +6,20 @@ import android.util.Log;
 /**
  * Created by Asilcott on 5/12/2015.
  */
-public class TeamTable {
+public class RosterTable {
     // Column names
-    public static final String TABLE_TEAM = "Team";
+    public static final String TABLE_ROSTER = "roster";
+    public static final String COLUMN_PLAYER_ID = "player_id";
     public static final String COLUMN_TEAM_ID = "team_id";
-    public static final String COLUMN_TEAM_NAME = "team_name";
 
     // SQL statement to create the table
     private static final String DATABASE_CREATE = "create table "
-            + TABLE_TEAM
+            + TABLE_ROSTER
             + "("
-            + COLUMN_TEAM_ID + " integer primary key autoincrement, "
-            + COLUMN_TEAM_NAME + " text not null, "
-            + ");";
+            + COLUMN_PLAYER_ID + " integer, "
+            + COLUMN_TEAM_ID + " integer, "
+            + "Foreign key(team_id) references Team(team_id), " +
+            " Foreign key(player_id) references Player(player_id));";
 
     public static void onCreate(SQLiteDatabase database) {
 
@@ -33,7 +34,7 @@ public class TeamTable {
                         + oldVersion + " to " + newVersion
                         + ", which destroyed all existing data");
 
-        database.execSQL("DROP TABLE IF EXISTS " + TABLE_TEAM);
+        database.execSQL("DROP TABLE IF EXISTS " + TABLE_ROSTER);
         onCreate(database);
 
         Log.d("TableTask.onUpgrade()", "complete");

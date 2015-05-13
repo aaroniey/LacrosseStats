@@ -11,7 +11,7 @@ import android.util.Log;
 
 public class PlayerTable {
     // Column names
-    public static final String TABLE_COLOR = "player";
+    public static final String TABLE_PLAYER = "player";
     public static final String COLUMN_PLAYER_ID = "player_id";
     public static final String COLUMN_FIRST_NAME = "first_name";
     public static final String COLUMN_LAST_NAME = "last_name";
@@ -21,7 +21,7 @@ public class PlayerTable {
 
     // SQL statement to create the table
     private static final String DATABASE_CREATE = "create table "
-            + TABLE_COLOR
+            + TABLE_PLAYER
             + "("
             + COLUMN_PLAYER_ID + " integer primary key autoincrement, "
             + COLUMN_FIRST_NAME + " text not null, "
@@ -44,7 +44,7 @@ public class PlayerTable {
                         + oldVersion + " to " + newVersion
                         + ", which destroyed all existing data");
 
-        database.execSQL("DROP TABLE IF EXISTS " + TABLE_COLOR);
+        database.execSQL("DROP TABLE IF EXISTS " + TABLE_PLAYER);
         onCreate(database);
 
         Log.d("TableTask.onUpgrade()", "complete");

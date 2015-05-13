@@ -3,8 +3,8 @@ create table Player(
 	first_name TEXT not null,
 	last_name TEXT not null,
 	jersey_number integer not null check(jersey_number > 0),
-	grade TEXT, 
-	position TEXT check(position = 'att' or position = 'mid' or position = 'gol' or position = 'def')
+	grade TEXT default 'unknown' check(grade = 'so' or grade = 'fr' or grade = 'jr' or grade = 'sr' or grade = 'unknown'), 
+	position TEXT default 'none' check(position = 'fos' or position = 'lsm' or position = 'smd' or position = 'att' or position = 'mid' or position = 'gol' or position = 'def' or position = 'none' )
 );
 create table Team(
 	team_id integer primary key autoincrement,
