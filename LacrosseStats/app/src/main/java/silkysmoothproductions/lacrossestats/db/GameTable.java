@@ -33,8 +33,8 @@ public class GameTable {
     public static final String TOTAL_TEAM_ASSISTS = "total_team_assists";
     public static final String TOTAL_TEAM_CAUSED_TURNOVERS = "total_team_caused_turnovers";
     public static final String TOTAL_TEAM_SAVES = "total_team_saves";
-    public static final String TOTAL_TEAM_FOWINS = "total_team_fowins";
-    public static final String TOTAL_TEAM_FOLOSSES = "total_team_folosses";
+    public static final String TOTAL_TEAM_FO_WINS = "total_team_fowins";
+    public static final String TOTAL_TEAM_FO_LOSSES = "total_team_folosses";
     
     //successful clears
     public static final String Q1_SUCCESSFUL_CLEARS = "q1_successful_clears";
@@ -99,7 +99,7 @@ public class GameTable {
             + "("
             + COLUMN_GAME_ID + " integer primary key autoincrement, "
             + COLUMN_TEAM_ID + " integer, "
-            + COLUMN_OPPONENT_NAME + " text, not null, "
+            + COLUMN_OPPONENT_NAME + " text not null, "
             + Q1_TEAM_SCORE  + idf
             + Q2_TEAM_SCORE  + idf
             + Q3_TEAM_SCORE  + idf
@@ -115,8 +115,8 @@ public class GameTable {
             + TOTAL_TEAM_ASSISTS  + idf
             + TOTAL_TEAM_CAUSED_TURNOVERS  + idf
             + TOTAL_TEAM_SAVES  + idf
-            + TOTAL_TEAM_FOWINS  + idf
-            + TOTAL_TEAM_FOLOSSES  + idf
+            + TOTAL_TEAM_FO_WINS  + idf
+            + TOTAL_TEAM_FO_LOSSES  + idf
             + Q1_SUCCESSFUL_CLEARS  + idf
             + Q2_SUCCESSFUL_CLEARS  + idf
             + Q3_SUCCESSFUL_CLEARS  + idf
@@ -157,8 +157,8 @@ public class GameTable {
             + Q3_FAILED_MANDOWNS  + idf
             + Q4_FAILED_MANDOWNS  + idf
             + TOTAL_FAILED_MANDOWNS  + idf
-            + "Foreign key(team_id) references Team(team_id), " +
-            " Foreign key(player_id) references Player(player_id));";
+            + "Foreign key(team_id) references Team(team_id) " +
+            " );";
 
     public static void onCreate(SQLiteDatabase database) {
 

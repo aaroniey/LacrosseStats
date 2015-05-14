@@ -18,41 +18,49 @@ public class IndividualStatsTable {
     public static final String Q3_GOALS = "q3_goals";
     public static final String Q4_GOALS = "q4_goals";
     public static final String TOTAL_GOALS = "total_goals";
+
     public static final String Q1_ASSISTS = "q1_assists";
     public static final String Q2_ASSISTS = "q2_assists";
     public static final String Q3_ASSISTS = "q3_assists";
     public static final String Q4_ASSISTS = "q4_assists";
     public static final String TOTAL_ASSISTS = "total_assists";
+
     public static final String Q1_SHOTS = "q1_shots";
     public static final String Q2_SHOTS = "q2_shots";
     public static final String Q3_SHOTS = "q3_shots";
     public static final String Q4_SHOTS = "q4_shots";
     public static final String TOTAL_SHOTS = "total_shots";
+
     public static final String Q1_GBS = "q1_gbs";
     public static final String Q2_GBS = "q2_gbs";
     public static final String Q3_GBS = "q3_gbs";
     public static final String Q4_GBS = "q4_gbs";
     public static final String TOTAL_GBS = "total_gbs";
+
     public static final String Q1_CAUSED_TURNOVERS = "q1_caused_turnovers";
     public static final String Q2_CAUSED_TURNOVERS = "q2_caused_turnovers";
     public static final String Q3_CAUSED_TURNOVERS = "q3_caused_turnovers";
     public static final String Q4_CAUSED_TURNOVERS = "q4_caused_turnovers";
     public static final String TOTAL_CAUSED_TURNOVERS = "total_caused_turnovers";
+
     public static final String Q1_FO_WINS = "q1_fo_wins";
     public static final String Q2_FO_WINS = "q2_fo_wins";
     public static final String Q3_FO_WINS = "q3_fo_wins";
     public static final String Q4_FO_WINS = "q4_fo_wins";
     public static final String TOTAL_FO_WINS = "total_fo_wins";
+
     public static final String Q1_FO_LOSSES = "q1_fo_losses";
     public static final String Q2_FO_LOSSES = "q2_fo_losses";
     public static final String Q3_FO_LOSSES = "q3_fo_losses";
     public static final String Q4_FO_LOSSES = "q4_fo_losses";
     public static final String TOTAL_FO_LOSSES = "total_fo_losses";
+
     public static final String Q1_SAVES = "q1_saves";
     public static final String Q2_SAVES = "q2_saves";
     public static final String Q3_SAVES = "q3_saves";
     public static final String Q4_SAVES = "q4_saves";
     public static final String TOTAL_SAVES = "total_saves";
+
     public static final String Q1_GOALS_ALLOWED = "q1_goals_allowed";
     public static final String Q2_GOALS_ALLOWED = "q2_goals_allowed";
     public static final String Q3_GOALS_ALLOWED = "q3_goals_allowed";
@@ -113,7 +121,7 @@ public class IndividualStatsTable {
             + Q3_GOALS_ALLOWED + idf
             + Q4_GOALS_ALLOWED + idf
             + TOTAL_GOALS_ALLOWED + idf
-            + "Foreign key(team_id) references Team(team_id), " +
+            + "Foreign key(game_id) references Game(game_id), " +
             " Foreign key(player_id) references Player(player_id));";
 
     public static void onCreate(SQLiteDatabase database) {

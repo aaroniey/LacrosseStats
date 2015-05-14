@@ -17,7 +17,7 @@ public class TeamTable {
             + TABLE_TEAM
             + "("
             + COLUMN_TEAM_ID + " integer primary key autoincrement, "
-            + COLUMN_TEAM_NAME + " text not null, "
+            + COLUMN_TEAM_NAME + " text not null "
             + ");";
 
     public static void onCreate(SQLiteDatabase database) {
