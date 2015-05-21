@@ -1,0 +1,19 @@
+main activity single fragment calls other frag/activity for general stats handling, which will manage data and subfragments.  all child/sub fragments will be tied to the single data managing parent.
+
+data managing parent is not visual, purly logical as a managment object.  mainly for easy data handling.
+
+query will be preformed for all stats on once a game has been selected.  
+
+if back button is pressed it will return to the thing that called the manager fragment and then and only then query the results to the database.
+
+saving to the database after back button should be a new thread!!! this may cause Read after Write errors look into a dirty bit tracker in the game schema that will be set on selection and reset once its good.
+
+possibly have a pause screen as we wait for saving comfirmation? is this possible?
+
+have a boolean that will track for changes?  if any changes made do not resave.  OR track two of every variable and if anything updated then make update call.  First option is MUCH better on storage but it will check each time, lot of comaprisons.  Second option better on speed due to one time compare but very bad on space and increased storage delay time.
+
+currently do not allow for deletions.  but if it is a feature to come later allow it to happen by "logical delete".  Leave entry in the database but flag it as deleted so it doesn't appear in current transactions but will show up for record keeping.
+
+Look into Cloud storage.
+
+much later in development, external storage and merging should probably be a priority.

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "22.0.1"
+    buildToolsVersion '21.1.2'
     defaultConfig {
         applicationId "silkysmoothproductions.lacrossestats"
         minSdkVersion 19
@@ -21,6 +21,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:support-v4:22.0.+'
 }
